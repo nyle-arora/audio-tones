@@ -11,5 +11,5 @@ def index():
 
 if __name__ == "__main__":
     # debug = true allows flask instance to refresh with the latest updates
-    # threaded = true
+    # threaded = true allows app to process multiple requests at same time
     app.run(debug=True, threaded=True)
