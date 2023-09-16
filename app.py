@@ -1,13 +1,21 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, send_from_directory, request
+import os
 
 app = Flask(__name__)
 
-# creates ruote to home page
+# creates route to home page
 @app.route("/", methods=['GET', 'POST'])
+# @app.route('/favicon.ico')
+# def favicon():
+#     return send_from_directory(os.path.join(app.root_path, 'static'),
+#                           'favicon.ico',mimetype='image/vnd.microsoft.icon')
 
 # defines what is returned on home page
 def index():
-    return "hello world"
+    # if post request is created through index.html page, be able to act on form data
+    if request.method == "POST":
+        print("form data received")
+    return render_template('index.html')
 
 if __name__ == "__main__":
     # debug = true allows flask instance to refresh with the latest updates
