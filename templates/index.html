@@ -12,6 +12,14 @@
                 <br>
                 <input type="submit" value="Transcribe"/>
             </form>
+            
+            {% if transcript != "" %}
+            <div id="speechTranscriptContainer">
+                <h1>Transcript</h1>
+                <p>{{transcript}}</p>
+            </div>
+            {% endif %}
+
         </div>
         <p>speech recognition by iconpro86 from <a href="https://thenounproject.com/browse/icons/term/speech-recognition/" target="_blank" title="speech recognition Icons">Noun Project</a> (CC BY 3.0)</p>
     </body>

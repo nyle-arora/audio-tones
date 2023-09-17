@@ -8,6 +8,7 @@ app = Flask(__name__)
 @app.route("/", methods=['GET', 'POST']) # creates route to home page
 # defines what is returned on home page
 def index():
+    transcript=""
     # act on form data received through POST request in HTML page
     if request.method == "POST": 
         print("form data received")
@@ -22,10 +23,9 @@ def index():
             # open up audio file and read it through recognizer
             with audioFile as source:
                 data = recognizer.record(source) # extract audio data from file
-            text = recognizer.recognize_google(data, key=None) #transcribe audio data to text using Google speech to text API (only works on wav files tho)
-            print(text)
+            transcript = recognizer.recognize_google(data, key=None) #transcribe audio data to text using Google speech to text API (only works on wav files tho)
 
-    return render_template('index.html')
+    return render_template('index.html', transcript=transcript)
 
 @app.route('/favicon.ico')
 def favicon():
