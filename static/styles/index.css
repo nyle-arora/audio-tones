@@ -20,14 +20,19 @@ h1, p, input {
 }
 
 #speechTranscriptContainer {
-    margin-top: 20px;
+    margin: 20px auto;
 }
 
 #speechText {
     border: 10px solid #0191FE;
-    font-size: 48px;
     margin: 0 auto;
+    font-size: 32px;
     padding: 5%;
     max-width: 700px;
     font-family: 'Dancing Script', 'Fuggles', sans-serif;
+}
+
+#copyright {
+    font-size: 10px;
+    color: gray;
 }
