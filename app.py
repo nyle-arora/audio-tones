@@ -1,15 +1,29 @@
-from flask import Flask, render_template, send_from_directory, request
+from flask import Flask, render_template, send_from_directory, request, redirect
 import os
+import speech_recognition as sr
 
 app = Flask(__name__)
 
-# creates route to home page
-@app.route("/", methods=['GET', 'POST'])
+
+@app.route("/", methods=['GET', 'POST']) # creates route to home page
 # defines what is returned on home page
 def index():
-    # if post request is created through index.html page, be able to act on form data
-    if request.method == "POST":
+    # act on form data received through POST request in HTML page
+    if request.method == "POST": 
         print("form data received")
+
+        #ensure that a valid file is being submitted to the app
+        if "file" not in request.files or request.files["file"].filename == "":
+            return redirect(request.url)
+
+        if request.files["file"]:
+            recognizer = sr.Recognizer() # create instance of Recognizer class from speech recognition library
+            audioFile = sr.AudioFile(request.files["file"]) # obtain audio file from file input in form
+            # open up audio file and read it through recognizer
+            with audioFile as source:
+                data = recognizer.record(source) # extract audio data from file
+            text = recognizer.recognize_google(data, key=None) #transcribe audio data to text using Google speech to text API (only works on wav files tho)
+            print(text)
 
     return render_template('index.html')
 
