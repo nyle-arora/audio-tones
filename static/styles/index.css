@@ -24,6 +24,10 @@ h1, p, input {
 }
 
 #speechText {
-    font-size: 15px;
-    width: 500px;
+    border: 10px solid #0191FE;
+    font-size: 48px;
+    margin: 0 auto;
+    padding: 5%;
+    max-width: 700px;
+    font-family: 'Dancing Script', 'Fuggles', sans-serif;
 }
