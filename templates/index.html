@@ -3,6 +3,10 @@
     <head>
         <meta charset="UTF-8">
         <title>Speech Recognition App</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{{url_for('static', filename='styles/index.css')}}">
     </head>
     <body>
         <div id="speechContainer">
@@ -10,13 +14,14 @@
             <form method="post" enctype="multipart/form-data">
                 <input type="file" name="file">
                 <br>
-                <input type="submit" value="Transcribe"/>
+                <input type="submit" id="submitButton" value="Transcribe"/>
             </form>
             
+            <!-- jinja python logic for making sure transcript exists -->
             {% if transcript != "" %}
             <div id="speechTranscriptContainer">
                 <h1>Transcript</h1>
-                <p>{{transcript}}</p>
+                <p id="speechText">{{transcript}}</p>
             </div>
             {% endif %}
 
