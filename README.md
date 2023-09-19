@@ -11,6 +11,11 @@ To setup and run Flask server locally through CLI, follow these steps:
 - install packages into virtual environment
   - python3 -m pip install flask
   - python3 -m pip install SpeechRecognition
+  - python3 -m pip install nltk
+    - open Python console with command "python3" in terminal
+    - in Python console, run the following commands
+      - import nltk
+      - nltk.download('vader_lexicon')
 
 # Run application in dev server
 
