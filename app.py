@@ -1,6 +1,7 @@
 from flask import Flask, render_template, send_from_directory, request, redirect
 import os
 import speech_recognition as sr
+from nltk.sentiment.vader import SentimentIntensityAnalyzer
 
 app = Flask(__name__)
 
@@ -25,7 +26,10 @@ def index():
                 data = recognizer.record(source) # extract audio data from file
             transcript = recognizer.recognize_google(data, key=None) #transcribe audio data to text using Google speech to text API (only works on wav files tho)
 
-    return render_template('index.html', transcript=transcript)
+    vader = SentimentIntensityAnalyzer() #initializing SentimentIntensityAnalyzer object from Vader package in NLTK
+    polarity_score = vader.polarity_scores(transcript)['compound']
+
+    return render_template('index.html', transcript=transcript, polarity_score=polarity_score)
 
 @app.route('/favicon.ico')
 def favicon():
