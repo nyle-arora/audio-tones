@@ -2,10 +2,10 @@ h1, p, input {
     font-family: 'Lato', sans-serif;
 }
 
-body {
+/* body {
     background: #4e54c8;  
     background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
-}
+} */
 
 .heading {
     width: 100%;
@@ -66,65 +66,115 @@ body {
     top: 90%;
 }
 
-.muzieknootjes {
-    display: block;
-    margin: auto;
-    position: relative;
-    width: 50%;
-    min-width: 300px;
-    height: 200px;
-    border: 0px solid #000;
+#background-wrap {
+    bottom: 0;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: -1;
+    background: #9b59b6;
+
 }
 
-.noot-1,
-.noot-2,
-.noot-3,
-.noot-4 {
-  position: absolute;
-  animation: notes 2s infinite linear;
-  font-size: 35px;
-  opacity: 0;
-}
-
-.noot-1 {
-    top: 60px;
-    left: 0;
-    animation-delay: 0.5s;
+.bubble{
+    position: absolute;
+    bottom: 0;
+    background: #f1f1f1;
+    border-radius: 50%;
+    opacity: 0.5;
+    animation: flying 10s infinite ease-in;
 }
   
-.noot-2 {
-    top: 30px;
-    left: 30%;
+.bubble:nth-child(1){
+    width: 40px;
+    height: 40px;
+    left: 10%;
+    animation-duration: 8s;
+}
+  
+.bubble:nth-child(2){
+    width: 20px;
+    height: 20px;
+    left: 20%;
+    animation-duration: 5s;
     animation-delay: 1s;
 }
-
-.noot-3 {
-    top: 90px;
-    left: 60%;
-    animation-delay: 1.5s;
-}
   
-.noot-4 {
-    top: 40px;
-    left: 90%;
+.bubble:nth-child(3){
+    width: 50px;
+    height: 50px;
+    left: 35%;
+    animation-duration: 10s;
     animation-delay: 2s;
 }
-
-@keyframes notes {
-    0% {
-      transform: scale(1) translate(0, 0);
-      opacity: 0;
+  
+.bubble:nth-child(4){
+    width: 80px;
+    height: 80px;
+    left: 50%;
+    animation-duration: 7s;
+    animation-delay: 0s;
+}
+  
+.bubble:nth-child(5){
+    width: 35px;
+    height: 35px;
+    left: 55%;
+    animation-duration: 6s;
+    animation-delay: 1s;
+}
+  
+.bubble:nth-child(6){
+    width: 45px;
+    height: 45px;
+    left: 65%;
+    animation-duration: 8s;
+    animation-delay: 3s;
+}
+  
+.bubble:nth-child(7){
+    width: 25px;
+    height: 25px;
+    left: 75%;
+    animation-duration: 7s;
+    animation-delay: 2s;
+}
+  
+.bubble:nth-child(8){
+    width: 80px;
+    height: 80px;
+    left: 80%;
+    animation-duration: 6s;
+    animation-delay: 1s;
+}
+  
+.bubble:nth-child(9){
+    width: 15px;
+    height: 15px;
+    left: 70%;
+    animation-duration: 9s;
+    animation-delay: 0s;
+}
+  
+.bubble:nth-child(10){
+    width: 50px;
+    height: 50px;
+    left: 85%;
+    animation-duration: 5s;
+    animation-delay: 3s;
+}
+  
+@keyframes flying{
+    0%{
+      bottom: -100px;
+      transform: translateX(0);
     }
-    50% {
-      opacity: 1;
-      transform: scale(1.5) translate(50%, -50%);
+    50%{
+      transform: translateX(100px);
     }
-    80% {
-      opacity: 0;
-      transform: scale(1.5) translate(100%, -100%);
-    }
-    100% {
-      transform: scale(1.5) translate(100%, -100%);
-      opacity: 0;
+    100%{
+      bottom: 1080px;
+      transform: translateX(-200px);
     }
 }
