@@ -20,6 +20,8 @@ body {
 
 #speechContainer {
     margin: 20px;
+    position: absolute;
+    left: 35%;
 }
 
 #submitButton {
@@ -60,6 +62,8 @@ body {
 #copyright {
     font-size: 10px;
     color: white;
+    position: absolute;
+    top: 90%;
 }
 
 .muzieknootjes {
