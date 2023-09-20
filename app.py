@@ -12,7 +12,6 @@ def index():
     transcript=""
     # act on form data received through POST request in HTML page
     if request.method == "POST": 
-        print("form data received")
 
         #ensure that a valid file is being submitted to the app
         if "file" not in request.files or request.files["file"].filename == "":
