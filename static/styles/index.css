@@ -2,6 +2,22 @@ h1, p, input {
     font-family: 'Lato', sans-serif;
 }
 
+body {
+    background: #4e54c8;  
+    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
+}
+
+.heading {
+    width: 100%;
+}
+
+.heading h1{
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+    font-family: 'Mooli', sans-serif;
+}
+
 #speechContainer {
     margin: 20px;
 }
@@ -29,7 +45,7 @@ h1, p, input {
     font-size: 32px;
     padding: 5%;
     max-width: 700px;
-    font-family: 'Dancing Script', 'Fuggles', sans-serif;
+    font-family: 'Mooli', 'Fuggles', sans-serif;
 }
 
 #copyright {
