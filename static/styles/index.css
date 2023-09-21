@@ -58,6 +58,7 @@ h1, p, input {
     padding: 5%;
     max-width: 700px;
     font-family: 'Mooli', 'Fuggles', sans-serif;
+    background: white;
 }
 
 #copyright {
