@@ -13,6 +13,12 @@ h1, p, input {
     font-family: 'Mooli', sans-serif;
 }
 
+#uploadText {
+    text-align: center;
+    color: #e2e0e0;
+    font-family: 'Mooli', sans-serif;
+}
+
 #speechContainer {
     margin: 20px;
 }
