@@ -1,5 +1,10 @@
 h1, p, input {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Mooli', sans-serif;
+}
+
+input {
+    position: absolute;
+    left: 45%;
 }
 
 .heading {
