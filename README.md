@@ -19,7 +19,7 @@ To setup and run Flask server locally through CLI, follow these steps:
 
 # Run application in dev server
 
-- activate Python virtual environment
+- activate Python virtual environment if not already activated
   - Windows command: PS> \Scripts\activate
   - Mac/Linux command: $ source speech-recognition-env/bin/activate
 - run application
