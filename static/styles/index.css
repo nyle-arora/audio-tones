@@ -54,9 +54,6 @@ input {
 
 #speechTranscriptContainer {
     margin: 20px auto;
-}
-
-#speechText {
     border: 10px solid #0191FE;
     margin: 0 auto;
     font-size: 32px;
@@ -65,6 +62,16 @@ input {
     font-family: 'Mooli', 'Fuggles', sans-serif;
     background: white;
 }
+
+/* #speechText {
+    border: 10px solid #0191FE;
+    margin: 0 auto;
+    font-size: 32px;
+    padding: 5%;
+    max-width: 700px;
+    font-family: 'Mooli', 'Fuggles', sans-serif;
+    background: white;
+} */
 
 #copyright {
     font-size: 10px;
