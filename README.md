@@ -25,8 +25,8 @@ To setup and run Flask server locally through CLI, follow these steps:
 - run application
   - $ python3 app.py
 
-  
-* there are some included audio files in the static directory in the repo that can be used for testing
+
+(there are some included audio files in the static directory in the repo that can be used for testing)
 
 # Stop running application
 
