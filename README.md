@@ -2,6 +2,15 @@ To setup and run Flask server locally through CLI, follow these steps:
 
 # Setup
 
+- make sure FLAC converson utility is installed on your system: 
+  - Windows command: PS> flac --version
+  - Mac/Linux command: $ flac --version
+- if FLAC is not installed on system:
+  - Windows: go to [FLAC official system ](https://xiph.org/flac/download.html) and follow official installation instructions
+    - Make sure to add the directory containing flac.exe to your PATH environment variable so that you can run the flac command from any command prompt
+  - Linux (Ubuntu/Debian) command: sudo apt-get install flac
+  - Mac command: brew install flac
+    - if you dont' have Homebrew installed, run: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 - create Python virtual environment (note: you don't actually have to create the virtual environment if cloning this repo since it's included in the directory - do make sure to go through the following steps however to install the packages into the environment)
   - Windows command: PS> python -m venv speech-recognition-env
   - Mac/Linux command: $ python3 -m venv speech-recognition-env
