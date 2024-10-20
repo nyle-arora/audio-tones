@@ -11,7 +11,7 @@ To setup and run Flask server locally through CLI, follow these steps:
   - Linux (Ubuntu/Debian) command: sudo apt-get install flac
   - Mac command: brew install flac
     - if you dont' have Homebrew installed, run: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-- create Python virtual environment (note: you don't actually have to create the virtual environment if cloning this repo since it's included in the directory - do make sure to go through the following steps however to install the packages into the environment)
+- create Python virtual environment (note: you don't actually have to create the virtual environment if cloning this repo since it's included in the directory - do make sure to go through the following steps however to install the packages into the environment ACTUALLY WILL HAVE TO UPDATE THIS TO REMOVE VENV FROM GIT)
   - Windows command: PS> python -m venv speech-recognition-env
   - Mac/Linux command: $ python3 -m venv speech-recognition-env
 - activate Python virtual environment
